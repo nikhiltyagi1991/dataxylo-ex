@@ -1,0 +1,21 @@
+extends layout
+
+block content
+  h1 feature#1
+  form(name="db-data", method="post",enctype="multipart/form-data", action="./feature1")
+    input(name="textdata" type="text" placeholder="Input text")
+    br
+    input(name="upload_file" type="file")
+    br
+    input(type="submit" value="Store in DB")
+  br
+  br
+  h1 feature#2
+  form(name="db-data", method="post",enctype="multipart/form-data", action="./feature2")
+    input(name="textdata" type="text" placeholder="Input text")
+    br
+    input(name="upload_file" type="file" id='imgInp' accept="image/*")
+    br
+    img(id="displayarea" height="300px" src='#' alt='your image')
+    br
+    input(type="submit" value="Store in DB")
